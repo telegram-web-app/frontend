@@ -1,19 +1,26 @@
 // Массив с товарами
 const products = [
     {
-      title: "Товар 1",
-      description: "Описание товара 1",
+      title: "Burger",
+      image: "/images/burger.png",
+      description: "Cool burger",
       price: 50,
-      quantity: 0 // Изначально значение quantity равно 0
+      quantity: 0
     },
     {
-      title: "Товар 2",
-      description: "Описание товара 2",
+      title: "Doner",
+      image: "/images/doner.png",
+      description: "Awesome doner",
       price: 80,
-      quantity: 0 // Изначально значение quantity равно 0
+      quantity: 0
     },
-    // Добавьте остальные товары в аналогичном формате
-    // ...
+    {
+      title: "Fries",
+      image: "/images/fries.png",
+      description: "Tasty fries",
+      price: 80,
+      quantity: 0
+    },
   ];
   
   // Массив для хранения выбранных товаров
@@ -23,12 +30,12 @@ const products = [
   function createProductCard(product) {
     return `
       <div class="card w-96 bg-base-100 my-2 shadow-xl">
-        <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+        <figure><img src="${product.image}" alt="Shoes" /></figure>
         <div class="card-body">
           <h2 class="card-title">${product.title}</h2>
           <p>${product.description}</p>
           <p>$ ${product.price}</p>
-          <div class="card-actions justify-end">
+          <div class="card-actions items-center justify-end">
             <button class="btn btn-primary btn-buy">Buy Now</button>
           </div>
         </div>
