@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="script.js"></script>
     <title>Quick food</title>
 </head>
 
@@ -13,3 +12,11 @@
     <p id="username">No username found</p>
 </body>
 </html>
+
+<script>
+    let WebApp = window.Telegram.WebApp;
+    WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+    
+    let username = document.getElementById("username");
+    username.innerHTML='test'
+</script>
