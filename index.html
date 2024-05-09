@@ -10,6 +10,7 @@
 <body>
     <p>hello world</p>
     <p id="username">No username found</p>
+    <p id="username2">No username found</p>
 </body>
 </html>
 
@@ -18,5 +19,9 @@
     WebApp.showAlert(`Добро пожаловать`);
     
     let username = document.getElementById("username");
-    username.innerHTML='test';
+    username.innerHTML=`${WebApp.WebAppInitData.user.username}`;
+
+    
+    let username2 = document.getElementById("username2");
+    username2.innerHTML=`${WebApp.initDataUnsafe.user.username}`;
 </script>
